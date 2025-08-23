@@ -1,0 +1,30 @@
+import React from 'react'
+
+const Cart = ({cart ,setcat}) => {
+  return (
+    <div>
+       <div className='h-screen w-screen bg-[#cdb4db] flex items-center justify-center'>
+            <div className='h-[80vh] w-[90vw] bg-[#ffc8dd] flex flex-row flex-wrap items-center gap-6 p-4 justify-center  overflow-y-auto  rounded-2xl'>
+                {cart.map((item) => (
+                    <div key={item.id} className='h-72 w-60 bg-[#ffafcc]  rounded-2xl flex  flex-col items-center mb-6 p-4 hover:scale-110 duration-300 shadow-gray-500 shadow-lg '>
+                        <img
+                            className='h-28 w-28 object-contain z-10  relative  hover:scale-110 group-hover/card:scale-100 transition-all duration-300'
+                            src={item.images[0]}></img>
+                        <h1
+                            className='mt-4 font-bold'>
+                            {item.brand}
+                        </h1>
+                        <h1
+                            className='mt-4 font-bold'>
+                            {item.price}
+                        </h1>
+                      
+                    </div>
+                ))}
+            </div>
+        </div>
+    </div>
+  )
+}
+
+export default Cart
