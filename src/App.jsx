@@ -23,11 +23,11 @@ const App = () => {
   return (
     <div>
      <BrowserRouter>
-     <Nav></Nav>
+     <Nav cart={cart}/>
 
      <Routes>
-      <Route path='/Home1' element={<Card1 cdata={fdata}  sdata={setdata} cart={cart} setcat={setcat}/>}/>
-      <Route path='/' element={<Homepage/>}/>
+      <Route path='/' element={<Card1 cdata={fdata}  sdata={setdata} cart={cart} setcat={setcat}/>}/>
+      <Route path='/flipcart' element={<Homepage/>}/>
       <Route path='/cart' element={<Cart cart={cart} setcat={setcat}/>}/>
       <Route path='/About' element={<About/>}/>
       <Route path='/Help' element={<Help/>}></Route>

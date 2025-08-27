@@ -2,9 +2,9 @@ import React from 'react'
 
 const About = () => {
   return (
-    <div>
-      <h1>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Accusamus cum illum, earum, sint amet eos nemo mollitia, quisquam beatae libero aut excepturi tenetur laboriosam deserunt voluptates repellat doloremque. Aperiam, cupiditate.
-      Tenetur maxime ex rem labore ea veritatis nesciunt aspernatur. Fuga aliquid ratione nostrum qui maxime commodi, facere perferendis reiciendis? Aliquam cum molestias quo impedit fugiat architecto sunt officia reiciendis asperiores.</h1>
+    <div className='h-screen w-screen bg-[#94c2ec] flex items-center   '>
+      <div className='h-24 w-80 bg-[#bde0fe] ml-36'></div>
+    <h1></h1>
     </div>
   )
 }
