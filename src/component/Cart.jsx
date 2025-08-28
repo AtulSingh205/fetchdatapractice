@@ -4,6 +4,8 @@ const Cart = ({ cart, setcat,cdata,sdata }) => {
     function handelId(Id) {
         let store = cart.filter((itm) => itm.id !== Id)
         setcat(store)
+        let update = cdata.map((val)=>val.id===Id ? {...val,isNew:false}:val)
+        sdata(update)
     }
     return (
         <div>

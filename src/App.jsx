@@ -28,7 +28,7 @@ const App = () => {
      <Routes>
       <Route path='/' element={<Card1 cdata={fdata}  sdata={setdata} cart={cart} setcat={setcat}/>}/>
       <Route path='/flipcart' element={<Homepage/>}/>
-      <Route path='/cart' element={<Cart cart={cart} setcat={setcat}/>}/>
+      <Route path='/cart' element={<Cart cart={cart} setcat={setcat} cdata={fdata} sdata={setdata}/>}/>
       <Route path='/About' element={<About/>}/>
       <Route path='/Help' element={<Help/>}></Route>
      </Routes>

@@ -1,19 +1,19 @@
 import React, { useEffect, useState } from 'react'
 
-const Card1 = ({ cdata, sdata ,cart ,setcat }) => {
+const Card1 = ({ cdata, sdata, cart, setcat }) => {
     function handelId(Id) {
         let store = cdata.map((val) => val.id === Id ? { ...val, isNew: !val.isNew } : val)
         sdata(store)
-        let clickitm = cdata.find((itm)=>itm.id===Id);
-        if(clickitm){
-            if(!cart.find((itm)=>itm.id==Id )){
-                setcat([...cart , clickitm])
+        let clickitm = cdata.find((itm) => itm.id === Id);
+        if (clickitm) {
+            if (cart.find((itm) => itm.id == Id)) {
+                setcat(cart.filter((itm) => itm.id !== Id))
             }
-             else {
-                setcat(cart.filter((itm)=> itm.id!==Id ))
-             }
+            else {
+                 setcat([...cart,clickitm])
+            }
         }
-        
+
     }
     return (
         <div className='h-screen w-screen bg-[#cdb4db] flex items-center justify-center'>
@@ -35,7 +35,7 @@ const Card1 = ({ cdata, sdata ,cart ,setcat }) => {
                             onClick={() => handelId(item.id)}
                             className={`h-8 w-auto mt-2 p-1 rounded-2xl whitespace-nowrap ${item.isNew ? "bg-[#bde0fe]" : "bg-[#a2d2ff]"}`}>
                             {item.isNew ? "Remove" : "Add to cart"}</button>
-                        
+
                     </div>
                 ))}
             </div>
