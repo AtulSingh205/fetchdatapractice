@@ -10,10 +10,14 @@ const Nav = ({cart}) => {
         <Link to='/flipcart' className='font-bold'>Flipcart</Link>
         <Link to='/' className='font-bold'>Home</Link>
         <Link to='/About'><h1 className='font-bold'>About</h1></Link>
-        <Link to='/Help'><h1 className='font-bold'>Help</h1></Link>
-        <Link to='/cart' className="relative h-12 w-15">
-          <img className='h-12 w-12 object-contain  '  src={carticon}></img>
-          <span className='absolute -top-2 -right-3 h-4 w-4 flex items-center justify-center rounded-full bg-red-500 text-white text-xs'>
+        <Link to='/Help'><h1 className='font-bold flex items-center'>
+          <img src='https://static-assets-web.flixcart.com/batman-returns/batman-returns/p/images/profile-52e0dc.svg'></img>
+          Login</h1>
+          </Link>
+        <Link to='/cart' className='flex'>
+          <img src='https://static-assets-web.flixcart.com/batman-returns/batman-returns/p/images/header_cart-eed150.svg'></img>
+          <h1 className='font-bold'>Cart</h1>
+          <span className='top-2 -right-3 h-4 w-4 flex items-center justify-center rounded-full bg-red-500 text-white text-xs'>
             {cart.length}
           </span>
         </Link>

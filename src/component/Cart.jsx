@@ -1,8 +1,8 @@
 import React from 'react'
 
-const Cart = ({ cart, setcat }) => {
-    function handelId(Id){
-        let store = cart.filter((itm)=> itm.id!==Id)
+const Cart = ({ cart, setcat,cdata,sdata }) => {
+    function handelId(Id) {
+        let store = cart.filter((itm) => itm.id !== Id)
         setcat(store)
     }
     return (
@@ -26,11 +26,11 @@ const Cart = ({ cart, setcat }) => {
                                 onClick={() => handelId(item.id)}
                                 className={`h-8 w-auto mt-2 p-1 rounded-2xl whitespace-nowrap bg-[#52080d]`}>Remove </button>
                         </div>
-                ))}
+                    ))}
+                </div>
             </div>
-        </div>
-    </div >
-  )
+        </div >
+    )
 }
 
 export default Cart
