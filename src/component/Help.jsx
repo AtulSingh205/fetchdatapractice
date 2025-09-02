@@ -8,6 +8,8 @@ const Help = () => {
     let handelform=(e)=>{
       e.preventDefault()
       console.log(name.current.value)
+      console.log(email.current.value)
+      console.log(password.current.value)
     }
 
 

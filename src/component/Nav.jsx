@@ -17,10 +17,11 @@ const Nav = ({cart}) => {
         <Link to='/cart' className='flex'>
           <img src='https://static-assets-web.flixcart.com/batman-returns/batman-returns/p/images/header_cart-eed150.svg'></img>
           <h1 className='font-bold'>Cart</h1>
-          <span className='top-2 -right-3 h-4 w-4 flex items-center justify-center rounded-full bg-red-500 text-white text-xs'>
+          <span className='top-2 -right-3 h-4 w-4 flex items-center justify-center rounded-full bg-red-500 text-white text-xs animate-bounce'>
             {cart.length}
           </span>
         </Link>
+        <Link className='font-bold' to='/Login'>Login</Link>
       </nav>
     </div>
   )

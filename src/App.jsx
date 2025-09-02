@@ -6,6 +6,7 @@ import Homepage from './component/Homepage';
 import Cart from './component/Cart';
 import About from './component/About';
 import Help from './component/Help';
+import Login from './component/Login';
 
 
 const App = () => {
@@ -31,6 +32,7 @@ const App = () => {
       <Route path='/cart' element={<Cart cart={cart} setcat={setcat} cdata={fdata} sdata={setdata}/>}/>
       <Route path='/About' element={<About/>}/>
       <Route path='/Help' element={<Help/>}></Route>
+      <Route  path='/Login' element={<Login/>}></Route>
      </Routes>
      </BrowserRouter>
     </div>
