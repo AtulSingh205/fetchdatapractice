@@ -19,7 +19,7 @@ const App = () => {
         setdata(sdata.products)
     }
     useEffect(()=>{
-        fetchdata()
+        fetchdata();
     },[])
   return (
     <div>
